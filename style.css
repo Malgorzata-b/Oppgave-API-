@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroundColor: rgb(241, 179, 79, 0.3);
+  --colorTitleMain: rgb(45, 35, 1);
+  --borderContainerCountry: black;
+  --bordershadow: rgb(65, 55, 6);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--backgroundColor);
+}
+
+.World-Welcome {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  height: 36.5rem;
+  width: 100%;
+  background-image: url(Image/Map5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Title-main {
+  color: var(--colorTitleMain);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 0.8rem;
+  text-shadow: 2px 2px 2px;
+}
+
+#Beautiful {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 3.5rem;
+  gap: 4rem;
+}
+
+.container-country {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 20px;
+  border: solid 1px var(--borderContainerCountry);
+  box-shadow: 5px 8px 10px var(--bordershadow);
+  padding: 1.3rem 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 15rem;
+}
+
+.imgFlag {
+  height: 8rem;
+  width: 10rem;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.country-name {
+  margin: 0.8rem auto;
+  text-align: center;
+}
+
+.population,
+.capital-name {
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: end;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+#region {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-left: 0.8rem;
+  height: 1.6rem;
+  width: 8rem;
+  box-shadow: 1px 1px 1px var(--bordershadow);
+}
+
+@media only screen and (max-width: 1180px) {
+  .imgFlag {
+    height: 6rem;
+    width: 8rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+  #Beautiful {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #Beautiful {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  .imgFlag {
+    height: 6rem;
+    width: 8rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+  .container-country {
+    width: 14rem;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #Beautiful {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 6.5rem;
+  }
+}
